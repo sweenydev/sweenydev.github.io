@@ -126,3 +126,17 @@ body{
 .scroll-show {
     z-index: 1;
 }
+
+.grow { 
+	transition: all .25s ease-in-out; 
+	padding: 0 40px 0 40px;
+}
+.grow:hover { 
+	transform: scale(1.5); 
+	color:red;
+}
+
+a {
+	color:inherit;
+	text-decoration: none;
+}

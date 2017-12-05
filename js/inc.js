@@ -1,8 +1,8 @@
 $(document).scroll(function () {
     var y = $(this).scrollTop();
     $(".scroll-show").each(function() {
-		var fadeZone=window.innerHeight/5;
-		var showZone=window.innerHeight/4.5;
+		var fadeZone=window.innerHeight/4;
+		var showZone=window.innerHeight/6;
 		var center = Math.floor(window.innerHeight/2);
 		var dist = Math.abs((y+center) - $(this).position().top-$(this).height()/2);
 		var opac;
@@ -13,4 +13,7 @@ $(document).scroll(function () {
 		console.log (opac)
 		$(this).css({ 'opacity' : opac })
 	});
+});
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
 });
