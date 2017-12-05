@@ -1,0 +1,57 @@
+h1{
+    color:red;
+    font-style: italic;
+}
+h2{
+    color:red;
+}
+p{
+    color:red;
+}
+ #zombie {   
+    width: 200px;
+    height: 312px;
+    background-image: url("../img/walkingdead.png");
+    animation: plays 1.8s steps(10) infinite;
+    position: relative;
+    margin:auto;
+    top:50%;
+}
+#candy {   
+    background-image: url("../img/candy.png");
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background-size: 100%;
+}
+.bad{   
+    background-image: url("../img/bad.png");
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background-size: 100%;
+}
+body{
+    background-image: url("../img/spook.jpg");
+}
+#wrapper{
+	width: 600px;
+        height: 200px;
+	position: relative;
+	animation: move 4s infinite ;	
+} 
+
+
+@keyframes plays {
+	from { background-position:    0px;  } 
+	to { background-position: -2000px;  } 
+}
+
+@keyframes move {
+    0%   {left:500px; top:0px; opacity: 1;}
+    25%  {left:500px; top:10px; opacity: 1;}
+    50%  {left:500px; top:0px;opacity: 1;}
+    75%  {left:500px; top:10px;opacity: 1;}
+    100% {left:500px; top:0px; opacity: 1;}
+
+}

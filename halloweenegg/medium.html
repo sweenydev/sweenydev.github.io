@@ -1,0 +1,158 @@
+<!DOCTYPE�html>
+<head>
+<title>Zombie</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    function docReady(){ 
+        window.addEventListener('keydown', moveZombie); 
+        window.addEventListener('keyup', stopZombie); 
+    }
+    var right=false;
+    var leftM=false;
+    var up=false;
+    var down=false;
+    function moveZombie(evt) { 
+	switch (evt.keyCode) { 
+            case 37:
+                leftM=true;
+                break;  
+            case 39:
+                right=true;
+                break;
+            case 38:
+                up=true
+                break;
+            case 40:
+                down=true
+                break;
+	}
+    }
+    function stopZombie(evt) { 
+	switch (evt.keyCode) { 
+            case 37:
+                leftM=false;
+                break;  
+            case 39:
+                right=false;
+                break;
+            case 38:
+                up=false;
+                break;
+            case 40:
+                down=false;
+                break;
+	}
+    }
+    function isCollide(a, b) {
+        var ah = 120;
+        var aw = 50;
+        var bh = 20;
+        var bw = 20;
+        var ay = a.position().top + 200;
+        var by = b.position().top;
+        var ax = a.position().left +600;
+        var bx = b.position().left;
+        return ((Math.abs(ax-bx)<aw+bw)&&(Math.abs(ay-by)<ah+bh))
+            
+    }
+    var score = 0
+    function updateScore(add){
+        score=score+add;
+        $("#score").html("<h1>Score: "+score+"</h1>");
+        if(score>14){
+            window.location.href = "win.html"
+        }
+    }
+    var wait1=600;
+    var wait2=825;
+    window.setInterval(function(){
+        //move
+        var speed = 1;
+        var zombie = document.getElementById('zombie');
+        if(up){
+            zombie.style.top = parseInt(zombie.style.top) - speed + 'px';
+        }
+        if(down){
+            zombie.style.top = parseInt(zombie.style.top) + speed + 'px';
+        }
+        if(leftM){
+            zombie.style.left = parseInt(zombie.style.left) - speed + 'px';
+        }
+        if(right){
+            zombie.style.left = parseInt(zombie.style.left) + speed + 'px';
+        }
+        //Bad 1
+        var bad1 = document.getElementById('bad1')
+        if(wait1<0){
+            bad1.style.top = parseInt(bad1.style.top) + 2 + 'px';
+            if (isCollide($("#zombie"),$("#bad1"))){
+                var left = Math.random() * (1500 - 100) + 100;
+                $("#bad1").css({top: 0, left: left, position:'absolute'});
+                updateScore(-1);
+                wait1=120;
+            }
+        }
+        else{
+            wait1--
+        }
+        if(parseInt(bad1.style.top)>650){
+            var left = Math.random() * (1500 - 100) + 100;
+            $("#bad1").css({top: 0, left: left, position:'absolute'});
+            wait1=120;
+        }
+        
+        //Bad 2
+        var bad2 = document.getElementById('bad2')
+        if(wait2<0){
+            bad2.style.top = parseInt(bad2.style.top) + 2 + 'px';
+            if (isCollide($("#zombie"),$("#bad2"))){
+                var left = Math.random() * (1500 - 100) + 100;
+                $("#bad2").css({top: 0, left: left, position:'absolute'});
+                updateScore(-1);
+                wait2=120;
+            }
+        }
+        else{
+            wait2--
+        }
+        if(parseInt(bad2.style.top)>650){
+            var left = Math.random() * (1500 - 100) + 100;
+            $("#bad2").css({top: 0, left: left, position:'absolute'});
+            wait2=120;
+        }
+        //Candy collide
+        if (isCollide($("#zombie"),$("#candy"))){
+            var top = Math.random() * (600 - 10) + 10;
+            var left = Math.random() * (1500 - 100) + 100;
+            $("#candy").css({top: top, left: left, position:'absolute'});
+            updateScore(1);
+        }
+    }, 1);
+
+
+
+</script>
+
+</head>
+
+<body onload="docReady()"> 
+    <div id="score"> <h1>Score:0</h1></div>
+<div id="wrapper">
+    <div id ="zombie" style="position:absolute; left:50px; top:50px">
+    </div>
+</div>    
+
+<div id ="candy" style="position:absolute; left:100px; top:100px">
+</div>
+
+<div id ="bad1" class="bad" style="position:absolute; left:500px; top:0px">
+</div>
+<div id ="bad2" class="bad" style="position:absolute; left:100px; top:0px">
+</div>
+
+    
+    
+</body>
+
+</html>
