@@ -1,0 +1,128 @@
+.words{
+	color:white;
+}
+#info{
+	margin-top:30vh;
+}
+#info .words{
+	font: 15px arial, sans-serif;
+	text-align:center;
+}
+#info .tiny{
+	font: 10px arial, sans-serif;
+    text-align:center;
+    width: 50%;
+    background-color:rgb(80, 80, 80);
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top:10px;
+    padding: 5px 0 5px 0;
+}
+h1{
+	font: 26px arial, sans-serif;
+    
+}
+#head{
+	margin-bottom:35vh;
+	font: 50px arial, sans-serif;
+}
+.title{
+	font: 36px arial, sans-serif;
+}
+.box{
+    color: rgb(51, 51, 51) !important;
+    background-color:white;
+    border-radius: 8px;
+    padding: 20px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    width: 80%;
+    margin: auto;
+    margin-bottom:20px;
+    text-align:center;
+}
+body{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eb0100+0,ff4d43+100 */
+	background: #eb0100; /* Old browsers */
+	background: -moz-linear-gradient(top, #eb0100 0%, #ff4d43 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #eb0100 0%,#ff4d43 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #eb0100 0%,#ff4d43 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb0100', endColorstr='#ff4d43',GradientType=0 ); /* IE6-9 */
+}
+#navbar1{
+	background-color: white;
+}
+.navbar-brand{
+	float: left;
+    height: 50px;
+    padding: 5px 15px 5px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.shadow{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+.polaroid-images{
+	margin-left:10%;
+	margin-right:10%;
+}
+
+.polaroid-images a
+{
+	background: white;
+	display: inline;
+	float: left;
+	margin: 0 15px 30px;
+	padding: 10px 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+	-moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+	box-shadow: 0 4px 6px rgba(0,0,0,.3);
+	-webkit-transition: all .15s linear;
+	-moz-transition: all .15s linear;
+	transition: all .15s linear;
+	z-index:0;
+        position:relative;
+}
+.polaroid-images a:after {
+	color: #333;
+	font-size: 20px;
+	content: attr(title);
+	position: relative;
+	top:15px;
+}
+.polaroid-images img { 
+	display: block;
+	margin-left: auto;
+    margin-right: auto;	
+	width: inherit; 
+}
+.polaroid-images a:hover{
+	-webkit-transform: rotate(0deg); 
+	-moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+	-webkit-transform: scale(1.2); 
+	-moz-transform: scale(1.2);
+        transform: scale(1.2);
+	z-index:10;
+	-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+	-moz-box-shadow: 0 10px 20px rgba(0,0,0,.7);
+        box-shadow: 0 10px 20px rgba(0,0,0,.7);
+}
+
+.centered {
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+.vid{
+	display: block;
+    margin: auto;
+    width: 60%;
+	padding-bottom: 40px;
+	border-radius: 20px;
+}
+.scroll-show {
+    z-index: 1;
+}
