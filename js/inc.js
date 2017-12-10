@@ -1,5 +1,12 @@
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+	scrollShow();
+});
 $(document).scroll(function () {
-    var y = $(this).scrollTop();
+   scrollShow();
+});
+function scrollShow(){
+	 var y = $(this).scrollTop();
     $(".scroll-show").each(function() {
 		var fadeZone=window.innerHeight/4;
 		var showZone=window.innerHeight/6;
@@ -10,10 +17,6 @@ $(document).scroll(function () {
 			opac = 1;
 		else
 			opac =  1 - 1/fadeZone * (dist-showZone);
-		console.log (opac)
 		$(this).css({ 'opacity' : opac })
 	});
-});
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip(); 
-});
+}
