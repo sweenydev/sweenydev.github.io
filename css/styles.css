@@ -49,6 +49,9 @@
 	.navbar-brand{
 		display:none;
 	}
+	.navbar-collapse {
+	  max-height: none; 
+	}
 }
 .words{
 	color:white;
