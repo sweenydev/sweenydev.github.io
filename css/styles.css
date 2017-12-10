@@ -37,13 +37,13 @@
 	  height:12vw;
   }
   .navbar-toggle{
-	  height:10vw;
-	  width:10vh;
+	  height:12vh;
+	  width:10vw;
 	  background-position:center;
   }
   .navbar-nav li a {
-    line-height: 10vw;
-    height: 10vw;
+    line-height: 10vh;
+    height: 10vh;
     padding-top: 0;
 	}
 	.navbar-brand{
