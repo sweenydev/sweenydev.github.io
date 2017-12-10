@@ -33,6 +33,13 @@
   .collapse.in{
       display:block !important;
   }
+  .navbar-header{
+	  height:12vh;
+  }
+  .navbar-toggle{
+	  height:10vh;
+	  width:10vw;
+  }
 }
 .words{
 	color:white;
