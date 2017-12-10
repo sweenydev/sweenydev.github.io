@@ -38,8 +38,17 @@
   }
   .navbar-toggle{
 	  height:10vh;
-	  width:10vw;
+	  width:8vw;
+	  background-position:center;
   }
+  .navbar-nav li a {
+    line-height: 100px;
+    height: 10vh;
+    padding-top: 0;
+	}
+	.navbar-brand{
+		display:none;
+	}
 }
 .words{
 	color:white;
