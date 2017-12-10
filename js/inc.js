@@ -5,6 +5,7 @@ $(document).ready(function(){
 $(document).scroll(function () {
    scrollShow();
 });
+
 function scrollShow(){
 	 var y = $(this).scrollTop();
     $(".scroll-show").each(function() {
