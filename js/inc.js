@@ -23,5 +23,5 @@ function scrollShow(){
 	});
 }
 function header(){
-	document.getElementByClassName("nav").innerHTML = "Hello JavaScript!";
+	document.getElementByClassName("navbar-fixed-top").innerHTML = "Hello JavaScript!";
 }
