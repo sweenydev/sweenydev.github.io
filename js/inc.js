@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip(); 
 	scrollShow();
-	$(".navbar-fixed-top").innerHTML = "Hello JavaScript!";
+	$(".navbar-fixed-top").html("fuck destin");
 });
 $(document).scroll(function () {
    scrollShow();
