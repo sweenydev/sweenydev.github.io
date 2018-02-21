@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip(); 
 	scrollShow();
+	document.getElementByClassName("nav").innerHTML = "Hello JavaScript!";
 });
 $(document).scroll(function () {
    scrollShow();
@@ -20,4 +21,7 @@ function scrollShow(){
 			opac =  1 - 1/fadeZone * (dist-showZone);
 		$(this).css({ 'opacity' : opac })
 	});
+}
+function header(){
+	document.getElementByClassName("nav").innerHTML = "Hello JavaScript!";
 }
