@@ -14,7 +14,7 @@
 	<body>
 		<div id="fb-root"></div>
 		<? include 'inc.php';
-			echo(makeHeader());
+			echo(TESTETSTETS);
 		?>
 		
 		<!--script>(function(d, s, id) {
