@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip(); 
 	scrollShow();
-	$(".nav").innerHTML = "Hello JavaScript!";
+	$(".navbar-fixed-top").innerHTML = "Hello JavaScript!";
 });
 $(document).scroll(function () {
    scrollShow();
